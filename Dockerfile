@@ -4,6 +4,6 @@ FROM ghost:latest
 # RUN chown -R node:node /var/lib/ghost/content/adapters/content
 COPY entrypoint-wrapper.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint-wrapper.sh
-RUN npm install ghost-azure-storage
+RUN npm install ghost-storage-azure
 ENTRYPOINT ["/usr/local/bin/entrypoint-wrapper.sh"]
 CMD ["node", "current/index.js"]
