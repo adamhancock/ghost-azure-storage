@@ -1,5 +1,4 @@
 #!/bin/sh
-mkdir -p /var/lib/ghost/content/adapters/storage
-cp -vR node_modules/ghost-azure-storage /var/lib/ghost/content/adapters/storage/
-chown -R node:node /var/lib/ghost/content/adapters/content
+mkdir -p content/adapters/storage
+cp -vR node_modules/ghost-azure-storage content/adapters/storage/
 exec docker-entrypoint.sh "$@"
